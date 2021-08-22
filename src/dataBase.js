@@ -73,10 +73,11 @@ function batalhaPokemon(id1, id2) {
 
 function curarPokemon(id) {
     const pokemonCurado = pokemons[id]
-    if(pokemonCurado.hp > 80) {
+    const pocao = 20
+    if(pokemonCurado.hp + pocao > 100) {
         pokemonCurado.hp = 100
     } else {
-        pokemonCurado.hp = pokemonCurado.hp + 20
+        pokemonCurado.hp += pocao
     }
     return `${pokemonCurado.nome}: ${pokemonCurado.hp}`
 }
